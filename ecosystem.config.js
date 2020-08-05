@@ -1,9 +1,10 @@
 module.exports = {
   apps: [{
-    script: 'app.js',
+    script: '/home/ahmet/auto_deploy/current/app.js',
     name: 'deneme',
-    instances: 3,
-    exec_mode: "cluster"
+    cwd: '/home/ahmet/auto_deploy/current/',
+    watch: true,
+    merge_logs: true
   }],
   deploy: {
     production: {
@@ -12,7 +13,8 @@ module.exports = {
       ref: "origin/master",
       repo: "https://github.com/AhmetRota/auto_deploy.git",
       path: "/home/ahmet/auto_deploy",
-      "post-deploy": "npm install",
+      "post-deploy": "npm install && pm2 startOrRestart  /home/ahmet/ecosystem.config.js",
+      "post-setup": "npm install && pm2 start /home/ahmet/ecosystem.config.js",
       "ssh_options": "StrictHostKeyChecking=no"
     }
   }

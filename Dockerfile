@@ -5,7 +5,7 @@ COPY package*.json ./
 USER node
 RUN npm install --no-cache
 COPY --chown=node:node . .
-
+USER $user
 RUN npm install pm2 -g
 ENV PM2_PUBLIC_KEY 99tmdetgs3end82
 ENV PM2_SECRET_KEY 6w71tvew8hemarb

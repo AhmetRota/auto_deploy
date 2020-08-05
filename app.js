@@ -12,7 +12,7 @@ const sensor = require('./models/sensor.model');
 const udaqSensors = require('./models/udaqSensor.model');
 const WebSocket = require('ws');
 const osu = require('node-os-utils')
-const redisStatus = require('./utilities/redisHashLog.util');
+const redisStatus = require('./utilities/redisHashLog.utilsadasdsa');
 
 let urlVti = "http://" + process.env.VTI_PORT + "/";
 let urlUdaq = "http://" + process.env.UDAQ_PORT + "/";

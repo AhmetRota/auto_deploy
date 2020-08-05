@@ -11,15 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dockerode": "^3.1.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.8.3",
-    "node-os-utils": "^1.2.2",
-    "redis": "^3.0.2",
-    "request": "^2.88.0",
-    "sequelize": "^5.21.3",
-    "tedious": "^8.0.1",
-    "ws": "^7.2.1"
+    "express": "^4.17.1"
   }
 }
